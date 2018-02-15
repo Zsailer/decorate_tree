@@ -84,9 +84,11 @@ setup(
     url=URL,
     packages=find_packages(exclude=('tests',)),
     install_requires=REQUIRED,
+    entry_points = {
+        'console_scripts': ['decorate_tree=decorate_tree.main:main'],
+    },
     include_package_data=True,
     license='MIT',
-    scripts=['scripts/decorate_tree'],
     classifiers=[
         # Trove classifiers
         # Full list: https://pypi.python.org/pypi?%3Aaction=list_classifiers
